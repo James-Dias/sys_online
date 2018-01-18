@@ -1,87 +1,94 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @user, html: { class: 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :name, class: 'text_field form-control' %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :user_name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cpf, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cpf, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rg, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :rg, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :address, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone1, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :phone1, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone2, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :phone2, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :kind, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :kind, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :image, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :nickname, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nickname, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :neighborhood, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :neighborhood, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :city, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :city, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :zone, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :zone, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :occupation, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :occupation, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :description, class: 'text_field form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf, id: :user_cpf %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rg %>
-    <%= form.text_field :rg, id: :user_rg %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :user_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone1 %>
-    <%= form.text_field :phone1, id: :user_phone1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone2 %>
-    <%= form.text_field :phone2, id: :user_phone2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :kind %>
-    <%= form.number_field :kind, id: :user_kind %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image, id: :user_image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nickname %>
-    <%= form.text_field :nickname, id: :user_nickname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :neighborhood %>
-    <%= form.text_field :neighborhood, id: :user_neighborhood %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :user_city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :zone %>
-    <%= form.text_field :zone, id: :user_zone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :occupation %>
-    <%= form.text_field :occupation, id: :user_occupation %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :user_description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, class: 'btn btn-primary' %>
+      <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                  users_path, class: 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
