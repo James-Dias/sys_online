@@ -39,12 +39,16 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bootstrap-sass-extras'
 # A set of common locale data and translations to internationalize and/or localize your Rails applications.
 gem 'rails-i18n', '~> 5.0', '>= 5.0.4'
-#Flexible authentication solution for Rails with Warden.
+# Flexible authentication solution for Rails with Warden.
 gem 'devise'
 # Devise Bootstrap views with i18n support.
 gem 'devise-bootstrap-views'
-
+# A gem to automate using jQuery with Rails
 gem 'jquery-rails'
+# Asset Gem wrapper for bootstra-growl by mouse0270
+gem 'bootstrap-growl-rails'
+# the font-awesome font bundled as an asset for the rails asset pipeline
+gem "font-awesome-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
