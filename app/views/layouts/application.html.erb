@@ -62,13 +62,21 @@
 
 					<li><%= link_to current_user.email %></li>
 
-					<!-- /.dropdown -->
-					<li class="nav-item">
-					    <%= link_to destroy_user_session_path, method: :delete, :class => "nav-link" do %>
-					        <i class="fa fa-fw fa-sign-out"></i>Sair
-					    <% end %>
-					</li>
-					<!-- /.dropdown -->
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-user">
+                  <li>
+                      <%= link_to destroy_user_session_path, method: :delete do %>
+                          <i class="fa fa-sign-out fa-fw"></i>
+                          Sair
+                      <% end %>
+                  </li>
+              </ul>
+              <!-- /.dropdown-user -->
+          </li>
+          <!-- /.dropdown -->
 					</ul>
 					<!-- /.navbar-top-links -->
         </div><!-- /.navbar-collapse -->
